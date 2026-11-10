@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Grok Bot">
+  <title>Grok Bot · Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app">
+    <div class="demo-banner">DEMO · example data</div>
+    <header class="nav">
+      <button type="button" class="avatar" id="nav-avatar" aria-label="Account">
+        <img src="icons/icon-180.png" alt="">
+      </button>
+      <button type="button" class="brand" id="nav-brand">Grok Bot <span class="chevron">›</span></button><span class="paper-badge" id="paper-badge">PAPER</span>
+      <span class="nav-spacer"></span>
+      <button type="button" class="icon-btn" id="search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16.8 20 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="icon-btn" id="bell-btn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 9.6a5.8 5.8 0 1 1 11.6 0c0 4 1.3 5.5 1.8 6.2H4.4c.5-.7 1.8-2.2 1.8-6.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 18.6a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span id="bell-dot" class="bell-dot" hidden></span>
+      </button>
+    </header>
+    <div id="search-bar" class="search-bar" hidden>
+      <input id="search-input" type="search" placeholder="Search coins" autocomplete="off" autocapitalize="off">
+    </div>
+    <main id="view" class="view"></main>
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" data-tab="home" aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z" fill="currentColor"/></svg>
+        <span>Home</span>
+      </button>
+      <button type="button" data-tab="agents">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="7" r="2.2" fill="currentColor"/><circle cx="18" cy="12" r="2.2" fill="currentColor"/><circle cx="12" cy="17" r="2.2" fill="currentColor"/></svg>
+        <span>Agents</span>
+      </button>
+      <button type="button" data-tab="activity">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h14M5 12h14M5 17.5h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span>Activity</span>
+      </button>
+      <button type="button" data-tab="account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="currentColor"/><path d="M5.5 19.2c1.4-3 3.6-4.4 6.5-4.4s5.1 1.4 6.5 4.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        <span>Account</span>
+      </button>
+    </nav>
+  </div>
+  <div id="sheet" class="sheet-root" hidden></div>
+  <noscript><p class="noscript">Grok Bot needs JavaScript.</p></noscript>
+  <script src="chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
